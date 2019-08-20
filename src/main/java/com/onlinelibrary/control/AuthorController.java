@@ -17,7 +17,6 @@ public class AuthorController {
 
     public AuthorController(AuthorRepositoryImpl authorRepository) {
         this.authorRepository = authorRepository;
-
     }
 
     @PostMapping("/add")
@@ -38,7 +37,7 @@ public class AuthorController {
         return authorRepository.updateAuthorById(id, author);
     }
 
-    @DeleteMapping("/delete/")
+    @DeleteMapping("/delete")
     public List<Author> deleteAuthorToId(@RequestParam Integer id) {
         return authorRepository.deleteAuthorById(id);
     }
